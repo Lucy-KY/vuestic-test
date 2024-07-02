@@ -26,23 +26,23 @@ export default {
       },
     },
     {
-      name: 'payments',
-      displayName: 'menu.payments',
+      name: 'services',
+      displayName: 'menu.services',
       meta: {
         icon: 'credit_card',
       },
       children: [
         {
-          name: 'payment-methods',
-          displayName: 'menu.payment-methods',
+          name: 'apps',
+          displayName: 'menu.apps',
         },
         {
-          name: 'pricing-plans',
-          displayName: 'menu.pricing-plans',
+          name: 'people',
+          displayName: 'menu.people',
         },
         {
-          name: 'billing',
-          displayName: 'menu.billing',
+          name: 'manage',
+          displayName: 'menu.manage',
         },
       ],
     },
