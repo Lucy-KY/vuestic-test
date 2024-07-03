@@ -1,21 +1,8 @@
 import { sleep } from '../../services/utils'
-import { User, UserRole, OsType } from '../../pages/services/types'
+import { User } from '../../pages/services/types'
 import usersDb from './users-db.json'
-import projectsDb from './projects-db.json'
-import { Project } from '../../pages/projects/types'
 
 export const users = usersDb as User[]
-
-const getUserProjects = (userId: number | string) => {
-  return projectsDb
-    .filter((project) => project.team.includes(Number(userId)))
-    .map((project) => ({
-      ...project,
-      project_owner: users.find((user) => user.id === project.project_owner)!,
-      team: project.team.map((userId) => users.find((user) => user.id === userId)!),
-      status: project.status as Project['status'],
-    }))
-}
 
 // Simulate API calls
 
@@ -61,8 +48,6 @@ export const getUsers = async (filters: Partial<Filters & Pagination & Sorting>)
   if (search) {
     filteredUsers = filteredUsers.filter((user) => user.fullname.toLowerCase().includes(search.toLowerCase()))
   }
-
-  filteredUsers = filteredUsers.map((user) => ({ ...user, projects: getUserProjects(user.id) }))
 
   if (sortBy && sortingOrder) {
     filteredUsers = filteredUsers.sort((a, b) => {

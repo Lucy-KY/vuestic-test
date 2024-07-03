@@ -1,5 +1,5 @@
 export type UserRole = 'Admin' | 'User' | 'Owner'
-export type OsType = 'OS:Android' | 'OS:IOS'
+export type OsType = 'Android' | 'IOS'
 export type ReleaseType = 'Alpha' | 'Beta'
 
 export type User = {

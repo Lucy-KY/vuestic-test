@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { PropType, computed, ref, watch } from 'vue'
 import { useForm } from 'vuestic-ui'
-import { User, UserRole } from '../types'
+import { User } from '../types'
 import UserAvatar from './UserAvatar.vue'
-import { useProjects } from '../../projects/composables/useProjects'
 import { validators } from '../../../services/utils'
 
 const props = defineProps({
@@ -21,12 +20,11 @@ const defaultNewUser: User = {
   id: -1,
   avatar: '',
   fullname: '',
-  role: 'user',
-  username: '',
-  notes: '',
-  email: '',
+  os: 'Android',
+  releaseType: 'Alpha',
+  role: 'User',
   active: true,
-  projects: [],
+  notes: '',
 }
 
 const newUser = ref<User>({ ...defaultNewUser })
@@ -80,13 +78,8 @@ const onSave = () => {
   }
 }
 
-const roleSelectOptions: { text: Capitalize<UserRole>; value: UserRole }[] = [
-  { text: 'Admin', value: 'admin' },
-  { text: 'User', value: 'user' },
-  { text: 'Owner', value: 'owner' },
-]
+const roleSelectOptions = ['Admin', 'Owner', 'User']
 
-const { projects } = useProjects({ pagination: ref({ page: 1, perPage: 9999, total: 10 }) })
 </script>
 
 <template>
@@ -117,34 +110,6 @@ const { projects } = useProjects({ pagination: ref({ page: 1, perPage: 9999, tot
           class="w-full sm:w-1/2"
           :rules="[validators.required]"
           name="fullname"
-        />
-        <VaInput
-          v-model="newUser.username"
-          label="Username"
-          class="w-full sm:w-1/2"
-          :rules="[validators.required]"
-          name="username"
-        />
-      </div>
-      <div class="flex gap-4 flex-col sm:flex-row w-full">
-        <VaInput
-          v-model="newUser.email"
-          label="Email"
-          class="w-full sm:w-1/2"
-          :rules="[validators.required, validators.email]"
-          name="email"
-        />
-        <VaSelect
-          v-model="newUser.projects"
-          label="Projects"
-          class="w-full sm:w-1/2"
-          :options="projects"
-          :rules="[validators.required]"
-          name="projects"
-          text-by="project_name"
-          track-by="id"
-          multiple
-          :max-visible-options="2"
         />
       </div>
 
