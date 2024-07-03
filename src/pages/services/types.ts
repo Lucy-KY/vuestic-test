@@ -1,4 +1,4 @@
-export type UserRole = 'admin' | 'user' | 'owner'
+export type UserRole = 'Admin' | 'User' | 'Owner'
 export type OsType = 'OS:Android' | 'OS:IOS'
 export type ReleaseType = 'Alpha' | 'Beta'
 

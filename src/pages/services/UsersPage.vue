@@ -86,9 +86,9 @@ const beforeEditFormModalClose = async (hide: () => unknown) => {
                 <VaIcon name="search" color="secondary" size="small" />
               </template>
             </VaInput>
-            <VaSelect v-model:model-value="filters.os" :options="osSelectOptions" />
-            <VaSelect v-model:model-value="filters.role" :options="roleSelectOptions" />
-            <VaSelect v-model:model-value="filters.releaseType" :options="releaseTypeSelectOptions" />
+            <VaSelect v-model="filters.os" :options="osSelectOptions" />
+            <VaSelect v-model="filters.role" :options="roleSelectOptions" />
+            <VaSelect v-model="filters.releaseType" :options="releaseTypeSelectOptions" />
           </div>
         </div>
         <div class="flex flex-row-reverse justify-end">

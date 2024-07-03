@@ -4,7 +4,7 @@
     "fullname": "GlobalMoney Transfers My Android sampleApp",
     "os": "Android",
     "releaseType": "Beta",
-    "role": "user",
+    "role": "User",
     "avatar": "",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
@@ -14,7 +14,7 @@
     "fullname": "HSBC Bangladesh Cert No RASP (release)",
     "os": "Android",
     "releaseType": "Alpha",
-    "role": "admin",
+    "role": "Admin",
     "avatar": "😍",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
@@ -24,8 +24,8 @@
     "fullname": "HSBC Zeon Cert insecure debug",
     "os": "ebrown@gmail.com",
     "releaseType": "ebrown",
-    "role": "user",
-    "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+    "role": "User",
+    "avatar": "https://randomUser.me/api/portraits/men/1.jpg",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
   },
@@ -34,7 +34,7 @@
     "fullname": "M2",
     "os": "mrm@gmail.com",
     "releaseType": "mrm",
-    "role": "owner",
+    "role": "Owner",
     "avatar": "",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
@@ -44,8 +44,8 @@
     "fullname": "Kevin Smith",
     "os": "kevin@gmail.com",
     "releaseType": "kevin13",
-    "role": "user",
-    "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+    "role": "User",
+    "avatar": "https://randomUser.me/api/portraits/men/2.jpg",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
   },
@@ -54,8 +54,8 @@
     "fullname": "Martin Hoff",
     "os": "martin@gmail.com",
     "releaseType": "martin3",
-    "role": "user",
-    "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
+    "role": "User",
+    "avatar": "https://randomUser.me/api/portraits/men/3.jpg",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
   },
@@ -64,7 +64,7 @@
     "fullname": "John Doe",
     "os": "john@mail.com",
     "releaseType": "john",
-    "role": "user",
+    "role": "User",
     "avatar": "",
     "active": true,
     "notes": ""
@@ -74,8 +74,8 @@
     "fullname": "Maksim Nedo",
     "os": "maksim@epic.com",
     "releaseType": "maksim",
-    "role": "admin",
-    "avatar": "https://avatars.githubusercontent.com/u/23530004?v=4",
+    "role": "Admin",
+    "avatar": "https://avatars.githubUsercontent.com/u/23530004?v=4",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
   },
@@ -84,7 +84,7 @@
     "fullname": "Dmitry Kuzmenko",
     "os": "dd@pp.com",
     "releaseType": "dd",
-    "role": "user",
+    "role": "User",
     "avatar": "",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
@@ -94,7 +94,7 @@
     "fullname": "Rayan Gosling",
     "os": "rayan@u.ua",
     "releaseType": "rayan",
-    "role": "user",
+    "role": "User",
     "avatar": "",
     "active": true,
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
@@ -105,7 +105,7 @@
     "fullname": "Laura Smith",
     "os": "laura@example.gg",
     "releaseType": "bbb",
-    "role": "user",
+    "role": "User",
     "avatar": "",
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
   },
@@ -115,7 +115,7 @@
     "fullname": "Ted Mosby",
     "os": "tedmosby@mail.com",
     "releaseType": "gamer777",
-    "role": "user",
+    "role": "User",
     "avatar": "😭",
     "notes": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
   },
@@ -125,8 +125,8 @@
     "fullname": "Forrest Schmidt Jr.",
     "os": "Willard23@gmail.com",
     "releaseType": "Clementine72",
-    "role": "user",
-    "avatar": "https://randomuser.me/api/portraits/men/4.jpg",
+    "role": "User",
+    "avatar": "https://randomUser.me/api/portraits/men/4.jpg",
     "notes": "sed asperiores sed"
   },
   {
@@ -135,8 +135,8 @@
     "fullname": "Emilio Bruen",
     "os": "Amya51@hotmail.com",
     "releaseType": "Madalyn_Brekke55",
-    "role": "user",
-    "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
+    "role": "User",
+    "avatar": "https://randomUser.me/api/portraits/men/5.jpg",
     "notes": "architecto amet deleniti"
   },
   {
@@ -144,9 +144,9 @@
     "active": false,
     "fullname": "Jenny Heathcote",
     "os": "Granville_Lebsack38@yahoo.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Vivienne98",
-    "avatar": "https://randomuser.me/api/portraits/men/6.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/6.jpg",
     "notes": "provident ipsam recusandae"
   },
   {
@@ -154,9 +154,9 @@
     "active": true,
     "fullname": "Sonya Cummerata III",
     "os": "Toni2@yahoo.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Norwood79",
-    "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/7.jpg",
     "notes": "aut quaerat totam"
   },
   {
@@ -164,9 +164,9 @@
     "active": true,
     "fullname": "Ruben Mitchell",
     "os": "Lisette41@yahoo.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Dariana_Schulist",
-    "avatar": "https://randomuser.me/api/portraits/men/8.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/8.jpg",
     "notes": "minima harum ut"
   },
   {
@@ -174,9 +174,9 @@
     "active": true,
     "fullname": "Blake Hudson I",
     "os": "Israel88@hotmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Crystal.Brakus29",
-    "avatar": "https://randomuser.me/api/portraits/men/9.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/9.jpg",
     "notes": "sint culpa voluptatem"
   },
   {
@@ -184,9 +184,9 @@
     "active": true,
     "fullname": "Alison Mueller",
     "os": "Darien_Mayer@gmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Cordie.Grant",
-    "avatar": "https://randomuser.me/api/portraits/men/10.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/10.jpg",
     "notes": "officia autem aliquam"
   },
   {
@@ -194,9 +194,9 @@
     "active": false,
     "fullname": "Miss Angelina Jenkins",
     "os": "Cristal.Sauer@yahoo.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Peggie.Runolfsdottir",
-    "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/11.jpg",
     "notes": "rerum rerum rerum"
   },
   {
@@ -204,9 +204,9 @@
     "active": true,
     "fullname": "Mack Boyle",
     "os": "Shanny30@gmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Phoebe67",
-    "avatar": "https://randomuser.me/api/portraits/men/12.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/12.jpg",
     "notes": "voluptatibus et soluta"
   },
   {
@@ -214,9 +214,9 @@
     "active": true,
     "fullname": "Raymond Simonis",
     "os": "Tressie.Bruen45@gmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Percy37",
-    "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/13.jpg",
     "notes": "aut id molestiae"
   },
   {
@@ -224,9 +224,9 @@
     "active": true,
     "fullname": "Janice Sporer",
     "os": "Anastasia85@hotmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Kali84",
-    "avatar": "https://randomuser.me/api/portraits/men/14.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/14.jpg",
     "notes": "magnam eum aliquam"
   },
   {
@@ -234,9 +234,9 @@
     "active": true,
     "fullname": "Francis Schowalter",
     "os": "Tess56@gmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Robyn.Kris",
-    "avatar": "https://randomuser.me/api/portraits/men/0.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/0.jpg",
     "notes": "similique architecto in"
   },
   {
@@ -244,9 +244,9 @@
     "active": true,
     "fullname": "Emilio Hoppe",
     "os": "Bruce49@yahoo.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Clemmie.Kutch",
-    "avatar": "https://randomuser.me/api/portraits/men/16.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/16.jpg",
     "notes": "rerum quae dolorem"
   },
   {
@@ -254,39 +254,39 @@
     "active": true,
     "fullname": "Janice Harber",
     "os": "Jude38@hotmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Neal70",
-    "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/17.jpg",
     "notes": "iure dolor provident"
   },
   {
     "id": 27,
     "fullname": "Evelyn Morar",
     "os": "Laverne.Roberts@hotmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Neal_Thompson84",
     "active": true,
-    "avatar": "https://randomuser.me/api/portraits/men/18.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/18.jpg",
     "notes": "quae eos placeat"
   },
   {
     "id": 28,
     "fullname": "Antoinette Schneider",
     "os": "Ambrose_Stehr25@gmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Esta.Hickle",
     "active": true,
-    "avatar": "https://randomuser.me/api/portraits/men/19.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/19.jpg",
     "notes": "qui cumque unde"
   },
   {
     "id": 29,
     "fullname": "Daniel Ebony",
     "os": "Nyah44@hotmail.com",
-    "role": "user",
+    "role": "User",
     "releaseType": "Jade.Kuhlman90",
     "active": true,
-    "avatar": "https://randomuser.me/api/portraits/men/20.jpg",
+    "avatar": "https://randomUser.me/api/portraits/men/20.jpg",
     "notes": "exercitationem velit consectetur"
   }
 ]

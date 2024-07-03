@@ -52,9 +52,11 @@ export const getUsers = async (filters: Partial<Filters & Pagination & Sorting>)
   let filteredUsers = users
 
   filteredUsers = filteredUsers.filter((user) => user.active === isActive)
-  // filteredUsers = filteredUsers.filter((user) => user.os === os || os === 'OS:All')
-  // filteredUsers = filteredUsers.filter((user) => user.releaseType === releaseType || releaseType === 'all')
-  // filteredUsers = filteredUsers.filter((user) => user.role === role || role === 'all')
+  filteredUsers = filteredUsers.filter((user) => os?.includes(user.os) || os?.includes('All'))
+  filteredUsers = filteredUsers.filter(
+    (user) => releaseType?.includes(user.releaseType) || releaseType?.includes('All'),
+  )
+  filteredUsers = filteredUsers.filter((user) => role?.includes(user.role) || role?.includes('All'))
 
   if (search) {
     filteredUsers = filteredUsers.filter((user) => user.fullname.toLowerCase().includes(search.toLowerCase()))
