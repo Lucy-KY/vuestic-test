@@ -1,4 +1,4 @@
-import { User } from '../users/types'
+import { User } from '../services/types'
 
 export type Project = {
   id: number

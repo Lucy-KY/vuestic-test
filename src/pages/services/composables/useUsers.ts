@@ -5,7 +5,7 @@ import { watchIgnorable } from '@vueuse/core'
 
 const makePaginationRef = () => ref<Pagination>({ page: 1, perPage: 10, total: 0 })
 const makeSortingRef = () => ref<Sorting>({ sortBy: 'fullname', sortingOrder: null })
-const makeFiltersRef = () => ref<Partial<Filters>>({ isActive: true, search: '' })
+const makeFiltersRef = () => ref<Partial<Filters>>({ isActive: true, search: '', os: 'OS:All', role: 'Role:All', releaseType: 'Release Type:All' })
 
 export const useUsers = (options?: {
   pagination?: Ref<Pagination>
@@ -15,7 +15,7 @@ export const useUsers = (options?: {
   const isLoading = ref(false)
   const users = ref<User[]>([])
 
-  const { filters = makeFiltersRef(), sorting = makeSortingRef(), pagination = makePaginationRef() } = options || {}
+  const { filters = makeFiltersRef(), sorting = makeSortingRef(), pagination = makePaginationRef()} = options || {}
 
   const fetch = async () => {
     isLoading.value = true

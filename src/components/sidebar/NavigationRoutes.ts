@@ -19,13 +19,6 @@ export default {
       },
     },
     {
-      name: 'users',
-      displayName: 'menu.users',
-      meta: {
-        icon: 'group',
-      },
-    },
-    {
       name: 'services',
       displayName: 'menu.services',
       meta: {

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-import AuthLayout from '../layouts/AuthLayout.vue'
 import AppLayout from '../layouts/AppLayout.vue'
 
 import RouteViewComponent from '../layouts/RouterBypass.vue'
@@ -24,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         name: 'users',
         path: 'users',
-        component: () => import('../pages/users/UsersPage.vue'),
+        component: () => import('../pages/services/UsersPage.vue'),
       },
       {
         name: 'services',
@@ -34,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
           {
             name: 'apps',
             path: 'apps',
-            component: () => import('../pages/users/UsersPage.vue'),
+            component: () => import('../pages/services/UsersPage.vue'),
           },
           {
             name: 'people',

@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import { defineVaDataTableColumns, useModal } from 'vuestic-ui'
-import { User, UserRole } from '../types'
+import { defineVaDataTableColumns } from 'vuestic-ui'
+import { User } from '../types'
 import UserAvatar from './UserAvatar.vue'
 import { PropType, computed, toRef } from 'vue'
 import { Pagination, Sorting } from '../../../data/pages/users'
 import { useVModel } from '@vueuse/core'
-import { Project } from '../../projects/types'
 
 const columns = defineVaDataTableColumns([
-  { label: 'Full Name', key: 'fullname', sortable: true },
-  { label: 'Email', key: 'email', sortable: true },
-  { label: 'Username', key: 'username', sortable: true },
-  { label: 'Role', key: 'role', sortable: true },
-  { label: 'Projects', key: 'projects', sortable: true },
-  { label: ' ', key: 'actions', align: 'right' },
+  { label: 'Name', key: 'fullname', sortable: true },
+  { label: 'OS', key: 'os', sortable: true },
+  { label: 'Release Type', key: 'releaseType', sortable: true },
+  { label: 'Role', key: 'role', sortable: true }
 ])
 
 const props = defineProps({
@@ -28,8 +25,6 @@ const props = defineProps({
 })
 
 const emit = defineEmits<{
-  (event: 'edit-user', user: User): void
-  (event: 'delete-user', user: User): void
   (event: 'update:sortBy', sortBy: Sorting['sortBy']): void
   (event: 'update:sortingOrder', sortingOrder: Sorting['sortingOrder']): void
 }>()
@@ -38,47 +33,7 @@ const users = toRef(props, 'users')
 const sortByVModel = useVModel(props, 'sortBy', emit)
 const sortingOrderVModel = useVModel(props, 'sortingOrder', emit)
 
-const roleColors: Record<UserRole, string> = {
-  admin: 'danger',
-  user: 'background-element',
-  owner: 'warning',
-}
-
 const totalPages = computed(() => Math.ceil(props.pagination.total / props.pagination.perPage))
-
-const { confirm } = useModal()
-
-const onUserDelete = async (user: User) => {
-  const agreed = await confirm({
-    title: 'Delete user',
-    message: `Are you sure you want to delete ${user.fullname}?`,
-    okText: 'Delete',
-    cancelText: 'Cancel',
-    size: 'small',
-    maxWidth: '380px',
-  })
-
-  if (agreed) {
-    emit('delete-user', user)
-  }
-}
-
-const formatProjectNames = (projects: Project[]) => {
-  if (projects.length === 0) return 'No projects'
-  if (projects.length <= 2) {
-    return projects.map((project) => project.project_name).join(', ')
-  }
-
-  return (
-    projects
-      .slice(0, 2)
-      .map((project) => project.project_name)
-      .join(', ') +
-    ' + ' +
-    (projects.length - 2) +
-    ' more'
-  )
-}
 </script>
 
 <template>
@@ -90,51 +45,27 @@ const formatProjectNames = (projects: Project[]) => {
     :loading="$props.loading"
   >
     <template #cell(fullname)="{ rowData }">
-      <div class="flex items-center gap-2 max-w-[230px] ellipsis">
+      <div class="flex items-center gap-2 ellipsis">
         <UserAvatar :user="rowData as User" size="small" />
         {{ rowData.fullname }}
       </div>
     </template>
 
-    <template #cell(username)="{ rowData }">
-      <div class="max-w-[120px] ellipsis">
-        {{ rowData.username }}
+    <template #cell(releaseType)="{ rowData }">
+      <div class="max-w-[350px] ellipsis">
+        {{ rowData.releaseType }}
       </div>
     </template>
 
-    <template #cell(email)="{ rowData }">
-      <div class="ellipsis max-w-[230px]">
-        {{ rowData.email }}
+    <template #cell(os)="{ rowData }">
+      <div class="ellipsis max-w-120px]">
+        {{ rowData.os }}
       </div>
     </template>
 
     <template #cell(role)="{ rowData }">
-      <VaBadge :text="rowData.role" :color="roleColors[rowData.role as UserRole]" />
-    </template>
-
-    <template #cell(projects)="{ rowData }">
-      <div class="ellipsis max-w-[300px] lg:max-w-[450px]">
-        {{ formatProjectNames(rowData.projects) }}
-      </div>
-    </template>
-
-    <template #cell(actions)="{ rowData }">
-      <div class="flex gap-2 justify-end">
-        <VaButton
-          preset="primary"
-          size="small"
-          icon="mso-edit"
-          aria-label="Edit user"
-          @click="$emit('edit-user', rowData as User)"
-        />
-        <VaButton
-          preset="primary"
-          size="small"
-          icon="mso-delete"
-          color="danger"
-          aria-label="Delete user"
-          @click="onUserDelete(rowData as User)"
-        />
+      <div class="ellipsis max-w-120px]">
+        {{ rowData.role }}
       </div>
     </template>
   </VaDataTable>

@@ -1,5 +1,5 @@
 import { sleep } from '../../services/utils'
-import { User } from './../../pages/users/types'
+import { User, UserRole, OsType } from '../../pages/services/types'
 import usersDb from './users-db.json'
 import projectsDb from './projects-db.json'
 import { Project } from '../../pages/projects/types'
@@ -33,6 +33,9 @@ export type Sorting = {
 export type Filters = {
   isActive: boolean
   search: string
+  os: string
+  releaseType: string
+  role: string
 }
 
 const getSortItem = (obj: any, sortBy: string) => {
@@ -45,10 +48,13 @@ const getSortItem = (obj: any, sortBy: string) => {
 
 export const getUsers = async (filters: Partial<Filters & Pagination & Sorting>) => {
   await sleep(1000)
-  const { isActive, search, sortBy, sortingOrder } = filters
+  const { isActive, search, os, releaseType, role, sortBy, sortingOrder } = filters
   let filteredUsers = users
 
   filteredUsers = filteredUsers.filter((user) => user.active === isActive)
+  // filteredUsers = filteredUsers.filter((user) => user.os === os || os === 'OS:All')
+  // filteredUsers = filteredUsers.filter((user) => user.releaseType === releaseType || releaseType === 'all')
+  // filteredUsers = filteredUsers.filter((user) => user.role === role || role === 'all')
 
   if (search) {
     filteredUsers = filteredUsers.filter((user) => user.fullname.toLowerCase().includes(search.toLowerCase()))

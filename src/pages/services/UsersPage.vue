@@ -3,21 +3,25 @@ import { ref } from 'vue'
 import UsersTable from './widgets/UsersTable.vue'
 import EditUserForm from './widgets/EditUserForm.vue'
 import { User } from './types'
+// import type { OsType } from './types'
 import { useUsers } from './composables/useUsers'
-import { useModal, useToast } from 'vuestic-ui'
+import { VaSelect, useModal, useToast } from 'vuestic-ui'
 
 const doShowEditUserModal = ref(false)
 
 const { users, isLoading, filters, sorting, pagination, ...usersApi } = useUsers()
-
 const userToEdit = ref<User | null>(null)
+
+const roleSelectOptions = ['Role:All', 'Role:Admin', 'Role:User', 'Role:Owner']
+const osSelectOptions = ['OS:All', 'OS:Android', 'OS:IOS']
+const releaseTypeSelectOptions = ['Release Type:All', 'Release Type:Alpha', 'Release Type:Beta']
 
 const showEditUserModal = (user: User) => {
   userToEdit.value = user
   doShowEditUserModal.value = true
 }
 
-const showAddUserModal = () => {
+const showAddAppModal = () => {
   userToEdit.value = null
   doShowEditUserModal.value = true
 }
@@ -75,22 +79,21 @@ const beforeEditFormModalClose = async (hide: () => unknown) => {
     <VaCardContent>
       <div class="flex flex-col md:flex-row gap-2 mb-2 justify-between">
         <div class="flex flex-col md:flex-row gap-2 justify-start">
-          <VaButtonToggle
-            v-model="filters.isActive"
-            color="background-element"
-            border-color="background-element"
-            :options="[
-              { label: 'Active', value: true },
-              { label: 'Inactive', value: false },
-            ]"
-          />
-          <VaInput v-model="filters.search" placeholder="Search">
-            <template #prependInner>
-              <VaIcon name="search" color="secondary" size="small" />
-            </template>
-          </VaInput>
+          <div class="text-lg font-bold">Apps</div>
+          <div class="flex lg:max-w-[200px] md:flex-row gap-2 justify-start">
+            <VaInput v-model="filters.search" placeholder="Search">
+              <template #prependInner>
+                <VaIcon name="search" color="secondary" size="small" />
+              </template>
+            </VaInput>
+            <VaSelect v-model:model-value="filters.os" :options="osSelectOptions" />
+            <VaSelect v-model:model-value="filters.role" :options="roleSelectOptions" />
+            <VaSelect v-model:model-value="filters.releaseType" :options="releaseTypeSelectOptions" />
+          </div>
         </div>
-        <VaButton @click="showAddUserModal">Add User</VaButton>
+        <div class="flex flex-row-reverse justify-end">
+          <VaButton preset="info" @click="showAddAppModal">Add new app</VaButton>
+        </div>
       </div>
 
       <UsersTable
@@ -129,3 +132,4 @@ const beforeEditFormModalClose = async (hide: () => unknown) => {
     />
   </VaModal>
 </template>
+
